@@ -263,7 +263,7 @@ I extend my gratitude to FTS for offering this incredible opportunity and provid
 
 
 ## :envelope_with_arrow: Contact
-If you have any questions or comments about TravelHub, please contact **[Doha Hmeid]** via  doha.hmeid@gmail.com.
+If you have any questions or comments about TravelHub, please contact **Shivam Khadde** via  khaddeshivam@gmail.com.
 <br>
 <br>
 <br>
