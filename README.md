@@ -232,9 +232,9 @@ Booking Confirmation Pdf
 The used Node version in this app is -> Node.js v20.12.2.
 To run TravelHub locally, follow these steps:
 1. Clone the repository:
-  **`git clone https://github.com/dohmeid/travel-accommodation-booking-platform.git`**
+  **`git clone https://github.com/khaddeshivam/travelhub`**
 2. Navigate to the project directory:  
- **`cd travel-accommodation-booking-platform`**
+ **`cd travelhub`**
 3. Install the required dependencies from package.json
 **`npm install`**
 4. Start the development server using:
