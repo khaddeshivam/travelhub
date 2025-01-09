@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import { City, GridType, Hotel, Room } from '../types/adminTypes';
 
 export interface DialogState<T = unknown> {
@@ -13,19 +13,20 @@ export interface UseDialog {
   openDialog: (
     type: GridType,
     mode: DialogState['mode'],
-    data?: City | Hotel | Room,
+    data?: City | Hotel | Room
   ) => void;
   closeDialog: () => void;
 }
 
-const useDialog = () => {
-  const initialState: DialogState = {
+const useDialog = (): UseDialog => {
+  // Memoizing the initialState with the correct type
+  const initialState: DialogState<City | Hotel | Room> = useMemo(() => ({
     type: GridType.CITY,
     mode: 'Add',
     isOpen: false,
-  };
+  }), []);
 
-  const [dialogState, setDialogState] = useState<DialogState>(initialState);
+  const [dialogState, setDialogState] = useState<DialogState<City | Hotel | Room>>(initialState);
 
   const openDialog = useCallback(
     (type: GridType, mode: DialogState['mode'], data?: City | Hotel | Room) => {
