@@ -41,7 +41,7 @@ const useDialog = () => {
 
   const closeDialog = useCallback(() => {
     setDialogState(initialState);
-  }, []);
+  }, [initialState]);
 
   return { dialogState, openDialog, closeDialog };
 };
