@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useAuthContext } from '../../../context/authProvider';
-import adminImage from '../../../assets/adminPicture.png';
+import adminImage from '../../../assets/adminpicture.png';
 import classes from './Header.module.css';
 
 const Header: FC = () => {
