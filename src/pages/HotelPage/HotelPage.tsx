@@ -13,14 +13,11 @@ const HotelPage: FC = () => {
   const { fetchHotelData, isLoading } = useHotelContext();
   const { searchQuery } = useSearchContext();
   const { hotelId } = useParams<{ hotelId: string }>();
-  let id = 0;
-  if (hotelId) {
-    id = parseInt(hotelId);
-  }
+  const id = hotelId ? parseInt(hotelId, 10) : 0;
 
   useEffect(() => {
     fetchHotelData(id, searchQuery.checkInDate, searchQuery.checkOutDate);
-  }, [id]);
+  }, [id, fetchHotelData, searchQuery.checkInDate, searchQuery.checkOutDate]);
 
   if (isLoading) {
     return <Spinner />;
